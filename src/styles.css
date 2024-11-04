@@ -1,0 +1,72 @@
+/* Styles de base */
+:root {
+  --color-beige: #F9D0A3;
+  --color-yellow: #FDD90B;
+  --color-black: #151217;
+  --color-red: #DA001E;
+}
+
+
+
+body {
+  font-family: 'Comfortaa', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-beige); /* Couleur de fond principale */
+  color: var(--color-black); /* Couleur de texte par défaut */
+}
+
+button {
+  background-color: var(--color-yellow); /* Couleur de fond des boutons */
+  color: var(--color-black); /* Couleur de texte des boutons */
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: var(--color-red); /* Couleur de fond au survol */
+  color: #fff; /* Couleur de texte au survol */
+}
+
+
+/* Responsive - Mobile */
+@media (max-width: 768px) {
+  header nav {
+    display: none; /* Cache le menu classique */
+  }
+
+  .burger-menu {
+    display: block; /* Affiche le menu burger */
+  }
+
+  /* Menu déroulant */
+  .mobile-nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #151217;
+    width: 200px;
+    border-radius: 5px;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .mobile-nav a {
+    color: #FDD90B;
+    padding: 10px;
+    text-align: center;
+    display: block;
+    border-bottom: 1px solid #F9D0A3;
+  }
+
+  .mobile-nav a:last-child {
+    border-bottom: none;
+  }
+
+  .mobile-nav.show {
+    display: flex;
+  }
+}

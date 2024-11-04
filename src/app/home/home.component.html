@@ -1,0 +1,19 @@
+<section class="presentation">
+  <h2>Bienvenue chez Au Petit Village</h2>
+  <p>Découvrez notre collection de figurines faites main inspirées de l'univers d'Astérix & Obélix, spécialement conçues pour les nostalgiques de leurs aventures.</p>
+</section>
+
+<section>
+  <button (click)="toggleSortOrder()">
+    {{ sortOrder ? 'Trier par prix décroissant' : 'Trier par prix croissant' }}
+  </button>
+
+  <div class="catalogue">
+    <div *ngFor="let product of products" class="product-card">
+      <h3>{{ product.name }}</h3>
+      <img [src]="product.image" alt="{{ product.name }}">
+      <p>Prix: {{ product.price }}€</p>
+      <button routerLink="/product/{{ product.id }}">Voir Détails</button>
+    </div>
+  </div>
+</section>

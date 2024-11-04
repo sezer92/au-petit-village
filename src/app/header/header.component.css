@@ -1,0 +1,28 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #151217;
+  color: #FFFFFF;
+}
+
+header img {
+  width: 150px;
+}
+
+nav a {
+  color: #FDD90B;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+  .hamburger {
+    display: inline-block;
+  }
+}
+

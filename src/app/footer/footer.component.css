@@ -1,0 +1,27 @@
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #151217;
+  color: #FFFFFF;
+}
+
+.social-icons a {
+  color: #FDD90B;
+  margin: 0 10px;
+  font-size: 1.5em;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #DA001E; /* Changer la couleur au survol */
+}
+
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
