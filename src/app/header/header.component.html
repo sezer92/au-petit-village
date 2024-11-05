@@ -1,10 +1,26 @@
 <header>
   <a routerLink="/">
-    <img src="assets/Logo_au_petit_village.jpg" alt="Logo Au Petit Village" />
+    <img src="src/assets/images/Logo_au_petit_village.jpg" alt="Au Petit Village" />
   </a>
-  <nav>
+
+  <!-- Menu Desktop -->
+  <nav class="desktop-menu">
     <a routerLink="/">Accueil</a>
     <a routerLink="/about">À propos</a>
     <a routerLink="/contact">Contact</a>
+  </nav>
+
+  <!-- Menu Burger pour Mobile -->
+  <div class="burger-menu" (click)="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <!-- Menu Mobile -->
+  <nav class="mobile-menu" [class.show]="menuOpen">
+    <a routerLink="/" (click)="toggleMenu()">Accueil</a>
+    <a routerLink="/about" (click)="toggleMenu()">À propos</a>
+    <a routerLink="/contact" (click)="toggleMenu()">Contact</a>
   </nav>
 </header>

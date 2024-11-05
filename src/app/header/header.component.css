@@ -8,21 +8,59 @@ header {
 }
 
 header img {
-  width: 150px;
+  width: 40px;
 }
 
-nav a {
-  color: #FDD90B;
-  margin: 0 15px;
+.desktop-menu {
+  display: flex;
+}
+
+.desktop-menu a {
+  color: #fdd90b;
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.burger-menu div {
+  width: 25px;
+  height: 3px;
+  background-color: #fdd90b;
+  margin: 4px;
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  background-color: #151217;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.mobile-menu a {
+  color: #fdd90b;
+  padding: 10px;
   text-decoration: none;
 }
 
 @media (max-width: 768px) {
-  nav {
+  .desktop-menu {
     display: none;
   }
-  .hamburger {
-    display: inline-block;
+
+  .burger-menu {
+    display: flex;
+  }
+
+  .mobile-menu.show {
+    display: flex;
   }
 }
-
